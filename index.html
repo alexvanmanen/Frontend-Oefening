@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Hoofdpagina</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/script.js"></script>
+
+    <script>
+        function checkPassword(){
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+//          var result = validatePassword(username, password);
+          if(username == "alex" && password ="voetbal"){
+            document.getElementById("login").innerHTML = "gelukt met inloggen";
+            window.location.href="link.html";
+          } else {
+            document.getElementById("login").innerHTML = "niet gelukt met inloggen";
+          }
+        }
+        </script>
+  </head>
+  <body>
+    <h1>Hoofdpagina</h1>
+      Username: <input id="username" type="text" name="username"><br>
+      Password: <input id="password" type="password" name="password"><br>
+      <button onclick="checkPassword()">inloggen</button>
+      <div id="login">
+    </div>
+
+
+  </body>
+</html>
